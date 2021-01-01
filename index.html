@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta author="Hung Tran" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-178423723-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-178423723-1");
+    </script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Hung Tran</title>
+  </head>
+
+  <body>
+    <!--*** NAVIGATION ***-->
+    <nav>
+      <div class="logo">
+        <h4><a href="#">Hung Tran</a></h4>
+      </div>
+      <ul class="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#myWork">My Work</a></li>
+        <li><a href="#aboutMe">About</a></li>
+        <li><a href="./resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!--*** LANDING ***-->
+    <section id="landing">
+      <div class="landingOverlay">
+        <header>
+          <h1 id="title">Hung Tran</h1>
+          <p id="subHeading">Web Developer</p>
+          <div class="landingButtons">
+            <a href="#myWork" class="btn animated slideInLeft" id="projectBtn">
+              View Projects
+            </a>
+            <a
+              href="/Resume.pdf"
+              target="_blank"
+              class="btn animated slideInRight"
+              id="resumeBtn"
+            >
+              View Resume
+            </a>
+          </div>
+          <ul class="icons">
+            <li>
+              <a
+                class="contactIcon animated bounceInDown githubLink"
+                href="https://github.com/hptran7"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-github-alt" title="Github Logo"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contactIcon animated bounceInDown linkedInLink"
+                href="https://www.linkedin.com/in/hungtran0713/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-linkedin" title="LinkedIn Logo"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contactIcon animated bounceInDown twitterLink"
+                href="#"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-twitter" title="Twitter Logo"></i>
+              </a>
+            </li>
+          </ul>
+
+          <span class="emailSpan">
+            Email:
+            <a href="mailto:tran.hung0713@gmail.com" class="emailLink"
+              >tran.hung0713@gmail.com</a
+            >
+          </span>
+        </header>
+      </div>
+    </section>
+
+    <!--*** MY WORK ***-->
+    <div id="pageContainer">
+      <section id="myWork">
+        <h2 class="sectionHeading">Projects</h2>
+        <div id="cardGrid">
+          <div class="cardContainer">
+            <div class="card">
+              <div class="projectImageWrapper">
+                <img
+                  class="screenshot"
+                  src="./images/kitchennew.png"
+                  alt="RecipeBox"
+                />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">RecipeBox</p>
+                <div class="buttonWrapper">
+                  <button
+                    id="modalBtn1"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn"
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- modal section for Project -->
+            <div id="simpleModal1" class="modal">
+              <div class="modal-content">
+                <div class="module-content">
+                  <div class="projectleft">
+                    <img src="./images/kitchennew.png" class="modal-img" />
+                  </div>
+                  <div class="projectRight">
+                    <span class="closeBtn">&times</span>
+                    <h2>Recipe-Box</h2>
+                    <ul class="project-technologies">
+                      <li class="project-technology">Javascript</li>
+                      <li class="project-technology">NodeJs</li>
+                      <li class="project-technology">Express</li>
+                      <li class="project-technology">Mustache/Express</li>
+                      <li class="project-technology">PostgresSQL</li>
+                      <li class="project-technology">Sequelize</li>
+                      <li class="project-technology">RESTFUL-API</li>
+                    </ul>
+                    <label class="project-label">About</label>
+                    <div class="project-detail">
+                      <p class="Project_summary">
+                        Recipe Box is your Modern day Recipe Book, it can help
+                        even the most seasoned Cooks to very easily store and
+                        manage their Recipes on the fly while also enabling the
+                        culinary curious user to browse thousand of new recipes,
+                        via search by Dish/ingredient, or Course.
+                      </p>
+                      <label>Difficulty</label>
+                      <p class="Project_summary">
+                        During this project we encountered a problem with
+                        displaying ingredients as a list since they were stored
+                        as a string in SQL. I created a function that turns the
+                        stored string into an array of ingredients and then use
+                        .forEach function to turn it into an object. With the
+                        object now I can use template literals to display
+                        ingredients as a list
+                      </p>
+                    </div>
+                    <div class="btn-section">
+                      <a
+                        href="https://dc-recipebox.herokuapp.com/"
+                        target="_blank"
+                        ><button class="demo-button">demo</button></a
+                      >
+                      <a
+                        href="https://github.com/hptran7/Recipes-Project.git"
+                        target="_blank"
+                        ><button class="demo-button">code</button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer">
+            <div class="card">
+              <div class="projectImageWrapper">
+                <img
+                  class="screenshot"
+                  src="./images/knitworthy.png"
+                  alt="Knitworthy"
+                />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Knitworthy</p>
+                <div class="buttonWrapper">
+                  <button
+                    id="modalBtn2"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn"
+                  >
+                    View Project
+                  </button>
+                  <div id="simpleModal2" class="modal">
+                    <div class="modal-content">
+                      <div class="module-content">
+                        <div class="projectleft">
+                          <img
+                            src="./images/knitworthy.png"
+                            class="modal-img"
+                          />
+                        </div>
+                        <div class="projectRight">
+                          <span class="closeBtn">&times</span>
+                          <h2>Recipe-Box</h2>
+                          <ul class="project-technologies">
+                            <li class="project-technology">Javascript</li>
+                            <li class="project-technology">HTML</li>
+                            <li class="project-technology">CSS</li>
+                            <li class="project-technology">Bootstrap</li>
+                            <li class="project-technology">RESTFUL-API</li>
+                          </ul>
+                          <label class="project-label">About</label>
+                          <div class="project-detail">
+                            <p class="Project_summary">
+                              Knitworthy uses the Ravelry API to pull
+                              information about users' projects and compare
+                              project data to real life time and length
+                              measurements to put the amount of love that goes
+                              into a handmade gift into perspective for someone
+                              who does not knit or crochet.
+                            </p>
+                            <label>Difficulty</label>
+                            <p class="Project_summary">
+                              The challenging aspect of this project is that
+                              Ravelry API is not completely filled. Users leave
+                              a lot of information blank and this creates errors
+                              when we try to display them. After we get the data
+                              from fetching API, we run it through a function
+                              that checks for all null values and replace them.
+                            </p>
+                          </div>
+                          <div class="btn-section">
+                            <a href="http://knitworthy.net/" target="_blank"
+                              ><button class="demo-button">demo</button></a
+                            >
+                            <a
+                              href="https://github.com/abbeyperini/Knitworthy.git"
+                              target="_blank"
+                              ><button class="demo-button">code</button></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardContainer">
+            <div class="card">
+              <div class="projectImageWrapper">
+                <img
+                  class="screenshot"
+                  src="./images/main.png"
+                  alt="Event Master"
+                />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Event Master</p>
+                <div class="buttonWrapper">
+                  <button
+                    id="modalBtn3"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn"
+                  >
+                    View Project
+                  </button>
+                  <div id="simpleModal3" class="modal">
+                    <div class="modal-content">
+                      <div class="module-content">
+                        <div class="projectleft">
+                          <img
+                            src="./images/main.png"
+                            class="modal-img"
+                            style="object-fit: fill"
+                          />
+                        </div>
+                        <div class="projectRight">
+                          <span class="closeBtn">&times</span>
+                          <h2>Event Master</h2>
+                          <ul class="project-technologies">
+                            <li class="project-technology">Javascript</li>
+                            <li class="project-technology">NodeJs</li>
+                            <li class="project-technology">Express</li>
+                            <li class="project-technology">React</li>
+                            <li class="project-technology">Redux</li>
+                            <li class="project-technology">PostgresSQL</li>
+                            <li class="project-technology">Sequelize</li>
+                            <li class="project-technology">RESTFUL-API</li>
+                          </ul>
+                          <label class="project-label">About</label>
+                          <div class="project-detail">
+                            <p class="Project_summary">
+                              Event master is a event sharing apps. At its
+                              basic, Event master is about highly customizable
+                              rapid event invitation creating. In addition to
+                              normal event creation, this app allows users to
+                              notify their guests about any changes, updates, or
+                              warning about covid exposure.
+                            </p>
+                            <label>Difficulty</label>
+                            <p class="Project_summary">TBA</p>
+                          </div>
+                          <div class="btn-section">
+                            <a href="#" target="_blank"
+                              ><button class="demo-button">demo</button></a
+                            >
+                            <a href="#" target="_blank"
+                              ><button class="demo-button">code</button></a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--*** ABOUT ME ***-->
+      <section id="aboutMe">
+        <h2 class="sectionHeading">About Me</h2>
+        <p class="sectionInfo">
+          My name is Hung Tran. I've worked in plastics industry as account
+          executive before deciding to follow my passion in coding . My
+          organization and attention to detail are outstanding, but my main
+          strength is in dividing problems into smaller chunk and solving them.
+          You can see some of my more creative problem solving in my work. For
+          more details about my experience and skills, download my resume.
+        </p>
+        <h2 class="sectionHeading">Skills</h2>
+        <div>
+          <ul class="icons skill_ul">
+            <li class="skill_item">
+              <i
+                class="fab fa-js-square contactIcon animated bounceInDown skill_icon"
+              ></i>
+              <label class="skill-name">Javascript</label>
+            </li>
+            <li class="skill_item">
+              <i
+                class="fab fa-python contactIcon animated bounceInDown skill_icon"
+              ></i>
+              <label class="skill-name">Python</label>
+            </li>
+            <li class="skill_item">
+              <i
+                class="fab fa-html5 contactIcon animated bounceInDown skill_icon"
+              ></i>
+              <label class="skill-name">HTML</label>
+            </li>
+            <li class="skill_item">
+              <i
+                class="fab fa-css3-alt contactIcon animated bounceInDown skill_icon"
+              ></i>
+              <label class="skill-name">CSS</label>
+            </li>
+            <li class="skill_item">
+              <i
+                class="fab fa-node-js contactIcon animated bounceInDown skill_icon"
+              ></i>
+              <label class="skill-name">Node.js</label>
+            </li>
+            <li class="skill_item">
+              <i
+                class="fab fa-react contactIcon animated bounceInDown skill_icon"
+              ></i>
+              <label class="skill-name">React</label>
+            </li>
+            <li class="skill_item">
+              <span
+                class="iconify contactIcon animated bounceInDown skill_icon"
+                data-icon="simple-icons:redux"
+                data-inline="false"
+              ></span>
+              <label class="skill-name">Redux</label>
+            </li>
+            <li class="skill_item">
+              <span
+                class="iconify contactIcon animated bounceInDown skill_icon"
+                data-icon="cib:postgresql"
+                data-inline="false"
+              ></span>
+              <label class="skill-name">Postgres</label>
+            </li>
+            <li class="skill_item">
+              <span
+                class="iconify contactIcon animated bounceInDown skill_icon"
+                data-icon="cib:typescript"
+                data-inline="false"
+              ></span>
+              <label class="skill-name">typescript</label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--*** CONTACT ***-->
+      <section id="contact">
+        <h2 class="sectionHeading">Get In Touch</h2>
+        <p class="sectionInfo">
+          If you are interested in working with me or want more information
+          about my work, I would love to hear from you! You can contact me
+          through email or any of the social media platforms listed below:
+        </p>
+
+        <div class="contact">
+          <ul class="icons">
+            <li>
+              <a
+                class="contactIcon animated bounceInDown githubLink"
+                href="https://github.com/hptran7"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-github-alt" title="Github Logo"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contactIcon animated bounceInDown linkedInLink"
+                href="https://www.linkedin.com/in/hungtran0713/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-linkedin" title="LinkedIn Logo"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contactIcon animated bounceInDown twitterLink"
+                href="https://www.linkedin.com/in/hungtran0713/"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-twitter" title="Twitter Logo"></i>
+              </a>
+            </li>
+          </ul>
+
+          <span class="emailSpan">
+            Email:
+            <a href="mailto:tran.hung0713@gmail.com" class="emailLink"
+              >tran.hung0713@gmail.com</a
+            >
+          </span>
+        </div>
+      </section>
+    </div>
+
+    <!--*** SCRIPTS ***-->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
