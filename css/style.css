@@ -1,5 +1,5 @@
 /*** FONTS IMPORTS ***/
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Oxygen+Mono');
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Oxygen+Mono");
 
 /*** VARIABLES / COLORS ***/
 :root {
@@ -14,10 +14,10 @@
 
 /*** MAIN STYLES ***/
 .animated {
-  -webkit-animation-duration:1s;
-  animation-duration:1s;
-  -webkit-animation-fill-mode:none!important;
-  animation-fill-mode:none!important
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: none !important;
+  animation-fill-mode: none !important;
 }
 
 * {
@@ -29,7 +29,7 @@
 body {
   background: var(--background);
   color: var(--offWhite);
-  font-family: 'Oxygen Mono', monospace, Arial, Helvetica, sans-serif;
+  font-family: "Oxygen Mono", monospace, Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -51,7 +51,7 @@ a {
 
 .btn:hover {
   background-color: var(--hover);
-  transform: scale(.97);
+  transform: scale(0.97);
 }
 
 .btn:focus {
@@ -94,7 +94,7 @@ nav {
 }
 
 .logo:hover {
-  transform: scale(.97);
+  transform: scale(0.97);
 }
 
 .logo a {
@@ -105,7 +105,7 @@ nav {
 
 .logo a:hover {
   color: var(--gold);
-  transform: scale(.97);
+  transform: scale(0.97);
 }
 
 .navLinks {
@@ -120,7 +120,7 @@ nav {
 }
 
 .navLinks li:hover {
-  transform: scale(.97);
+  transform: scale(0.97);
 }
 
 .navLinks li a {
@@ -185,7 +185,8 @@ nav {
   align-items: center;
 }
 
-#title, #subHeading  {
+#title,
+#subHeading {
   margin: 20px;
   font-weight: normal;
 }
@@ -197,7 +198,7 @@ nav {
 #subHeading {
   font-size: 2.5em;
   margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .landingButtons {
@@ -228,7 +229,7 @@ nav {
   text-decoration: none;
 }
 
-.contactIcon  {
+.contactIcon {
   font-size: 1.7em;
   border-radius: 50%;
   padding: 0.5em;
@@ -239,13 +240,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .45s ease-in;
+  transition: 0.45s ease-in;
   animation-duration: 1.6s;
 }
 
 .contactIcon:hover {
   background-color: var(--hover);
-  transform: rotate(360deg) scale(.97);
+  transform: rotate(360deg) scale(0.97);
 }
 
 .githubLink {
@@ -254,12 +255,12 @@ nav {
 
 .linkedInLink {
   color: rgb(0, 127, 178);
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 
 .twitterLink {
   color: rgb(0, 172, 237);
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
 .emailSpan {
@@ -271,12 +272,12 @@ nav {
   color: #fff;
   text-decoration: underline;
   font-style: bold;
-  animation-delay: .6s;
-  transition: all .4s ease-in;
+  animation-delay: 0.6s;
+  transition: all 0.4s ease-in;
 }
 
 .emailLink:hover {
-  transform: scale(.97);
+  transform: scale(0.97);
   color: var(--gold);
 }
 
@@ -284,14 +285,14 @@ nav {
 #cardGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap:3px;
+  grid-gap: 3px;
 }
 
 .cardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 3rem; */
+  margin-bottom: 3rem;
 }
 
 .card {
@@ -326,7 +327,6 @@ nav {
 .cardTitle {
   text-align: center;
   font-weight: bold;
-  margin: 10px;
 }
 
 .buttonWrapper {
@@ -350,7 +350,7 @@ nav {
   list-style: none;
 }
 
-.skillsList li{
+.skillsList li {
   border: 1px solid var(--background);
   padding: 12px;
   background-color: var(--light-grey);
@@ -416,77 +416,93 @@ textarea {
   margin: 1rem;
 }
 /* Modal */
-.modal{
-  display:none;
+.modal {
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  top:0;
+  top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.modal-content{
-  color:black;
+.modal-content {
+  color: black;
 
-  margin:10% auto;
+  margin: 10% auto;
   width: 55%;
-  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.3);
+  animation-name: openModal;
+  animation-duration: 1s;
 }
-.closeBtn{
-  color:#ccc;
+.closeBtn {
+  color: #ccc;
   float: right;
   font-size: 30px;
 }
-.closeBtn:hover,.closeBtn:focus{
-  color:black;
-  cursor:pointer;
+.closeBtn:hover,
+.closeBtn:focus {
+  color: black;
+  cursor: pointer;
   text-decoration: none;
 }
-.module-content{
-    display: flex;
-    color:var(--offWhite);
-    background: var(--secondary-grey) ;
+.module-content {
+  display: flex;
+  color: var(--offWhite);
+  background: var(--secondary-grey);
 }
-.modal-img{
-    /* width: 400px;
+.modal-img {
+  /* width: 400px;
     height: 300px; */
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
-.project-technologies{
-    list-style: none;
-    margin-top: 1rem;
+.project-technologies {
+  list-style: none;
+  margin-top: 1rem;
+  max-height: 125px;
+  overflow: auto;
 }
 
-.project-technology{
-    background: var(--secondary-grey);
-    border: 2px solid var(--offWhite);
-    color: var(--offWhite);
-    padding: 0.5rem;
-    font-size: 1em;
-    border-radius: 5px;
-    text-align: center;
-    display: inline-block;
-}
-.projectRight{
-    padding-left:1rem;
+.project-technology {
+  background: var(--secondary-grey);
+  border: 2px solid var(--offWhite);
+  color: var(--offWhite);
+  padding: 0.5rem;
+  font-size: 1em;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
 }
 
-.project-detail{
+.project-technologies::-webkit-scrollbar {
+  background-color: var(--secondary-grey);
+  width: 15px;
+}
+
+.project-technologies::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+
+.projectRight {
+  padding-left: 1rem;
+}
+
+.project-detail {
   max-height: 250px;
   overflow-y: scroll;
   max-width: 2000px;
   font-size: 0.87rem;
 }
-.project-detail label{
+.project-detail label {
   font-size: 0.97rem;
 }
 
-.project-detail::-webkit-scrollbar{
+.project-detail::-webkit-scrollbar {
   background-color: var(--secondary-grey);
   width: 15px;
 }
@@ -496,42 +512,55 @@ textarea {
   background-color: #555;
 }
 
-.demo-button{
+.demo-button {
   display: inline-block;
   color: #22262a;
   letter-spacing: 1px;
-  background-color:hsla(0,0%,100%,.8) ;
+  background-color: hsla(0, 0%, 100%, 0.8);
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin: 2rem .5rem 0 .5rem;
+  margin: 2rem 0.5rem 0 0.5rem;
   font-size: 1rem;
-  padding: .5rem 1rem;
-
+  padding: 0.5rem 1rem;
 }
 
-.skill-name{
+.skill-name {
   font-size: 1rem;
 }
 
-.skill_item{
+.skill_item {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.skill_ul{
+.skill_ul {
   flex-wrap: wrap;
   padding: 0 40px 0 40px;
 }
-.skill_icon{
-  color:rgb(0, 178, 139);
+.skill_icon {
+  color: rgb(0, 178, 139);
 }
+
+/**** keyfram ****/
+@keyframes openModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /***** MEDIA QUERIES *****/
 @media screen and (max-width: 1140px) {
   #cardGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .modal-content {
+    width: 80%;
   }
 }
 
@@ -543,11 +572,10 @@ textarea {
   .navLinks {
     width: 60%;
   }
-  .modal-content{
-    width: 80%;
+  .modal-content {
+    width: 70%;
   }
 }
-
 
 @media screen and (max-width: 825px) {
   #pageContainer {
@@ -557,7 +585,7 @@ textarea {
   #cardGrid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .modal-content{
+  .modal-content {
     width: 80%;
   }
 }
@@ -603,7 +631,7 @@ textarea {
     display: block;
     cursor: pointer;
   }
-  .modal-content{
+  .modal-content {
     width: 80%;
   }
 }
@@ -620,8 +648,11 @@ textarea {
     margin: 0;
     margin-bottom: 20px;
   }
-  .modal-content{
+  .modal-content {
     width: 80%;
+  }
+  .module-content {
+    flex-direction: column;
   }
 }
 
@@ -646,7 +677,7 @@ textarea {
     flex-direction: column;
   }
 
-  .buttonWrapper .btn{
+  .buttonWrapper .btn {
     margin-bottom: 1rem;
   }
 
@@ -667,13 +698,17 @@ textarea {
     font-size: 1.2rem;
   }
 
-  .module-content{
+  .module-content {
     flex-direction: column;
+  }
+  .modal-img {
+    display: none;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .card, .projectImageWrapper {
+  .card,
+  .projectImageWrapper {
     width: 275px;
   }
 
@@ -686,9 +721,6 @@ textarea {
   button {
     font-size: 0.9em;
   }
-  .module-content{
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-height: 700px) {
@@ -696,7 +728,6 @@ textarea {
     height: 100vh;
   }
 }
-
 
 /***** KEYFRAMES / ANIMATIONS *****/
 @keyframes navLinkFade {
