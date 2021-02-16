@@ -4,12 +4,28 @@ const navSlide = () => {
   const nav = document.querySelector(".navLinks");
   const navLinks = document.querySelectorAll(".navLinks li");
 
+  // Close All NavLinks
+  function allNavLinkClose() {
+    nav.classList.toggle("navActive");
+    burger.classList.toggle("toggleOpenClose");
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.4
+        }s`;
+      }
+    });
+  }
+
   burger.addEventListener("click", () => {
     // Toggle Nav for Mobile
     nav.classList.toggle("navActive");
 
     // Animate Links
     navLinks.forEach((link, index) => {
+      navLinks[index].addEventListener("click", allNavLinkClose);
       if (link.style.animation) {
         link.style.animation = "";
       } else {
@@ -24,6 +40,26 @@ const navSlide = () => {
   });
 };
 navSlide();
+
+// auto-close NavLink
+
+function allNavLinkClose() {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".navLinks");
+  const navLinks = document.querySelectorAll(".navLinks li");
+
+  nav.classList.toggle("navActive");
+  burger.classList.toggle("toggleOpenClose");
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 0.5s ease forwards ${
+        index / 7 + 0.4
+      }s`;
+    }
+  });
+}
 
 // Smooth Scrolling
 const navScroll = new SmoothScroll('nav ul li a[href*="#"]', {
