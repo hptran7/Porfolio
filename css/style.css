@@ -308,6 +308,7 @@ nav {
   width: 100%;
   border: 2px solid var(--light-grey);
   border-radius: 0 0 10px 10px;
+  max-height: 134px;
 }
 
 .projectImageWrapper {
