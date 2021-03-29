@@ -81,28 +81,34 @@ const modal2 = document.getElementById("simpleModal2");
 const modal3 = document.getElementById("simpleModal3");
 const modal4 = document.getElementById("simpleModal4");
 const modal5 = document.getElementById("simpleModal5");
+const modal6 = document.getElementById("simpleModal6");
 const modalBtn1 = document.getElementById("modalBtn1");
 const modalBtn2 = document.getElementById("modalBtn2");
 const modalBtn3 = document.getElementById("modalBtn3");
 const modalBtn4 = document.getElementById("modalBtn4");
 const modalBtn5 = document.getElementById("modalBtn5");
-const closeBtn = document.getElementsByClassName("closeBtn");
+const modalBtn6 = document.getElementById("modalBtn6");
+const closeBtn1 = document.getElementById("closeBtn1");
+// const closeBtn = document.getElementsByClassName("closeBtn");
 
 //listion for open click and close
 modalBtn1.addEventListener("click", openModal1);
-closeBtn[0].addEventListener("click", closeModal1);
+// closeBtn[0].addEventListener("click", closeModal1);
 
 modalBtn2.addEventListener("click", openModal2);
-closeBtn[1].addEventListener("click", closeModal2);
+// closeBtn[1].addEventListener("click", closeModal2);
 
 modalBtn3.addEventListener("click", openModal3);
-closeBtn[2].addEventListener("click", closeModal3);
+// closeBtn[2].addEventListener("click", closeModal3);
 
 modalBtn4.addEventListener("click", openModal4);
-closeBtn[3].addEventListener("click", closeModal4);
+// closeBtn[3].addEventListener("click", closeModal4);
 
 modalBtn5.addEventListener("click", openModal5);
-closeBtn[4].addEventListener("click", closeModal5);
+// closeBtn[4].addEventListener("click", closeModal5);
+
+modalBtn6.addEventListener("click", openModal6);
+// closeBtn[5].addEventListener("click", closeModal6);
 
 function openModal1() {
   modal1.style.display = "block";
@@ -144,6 +150,13 @@ function closeModal5() {
   modal5.style.display = "none";
 }
 
+function openModal6() {
+  modal6.style.display = "block";
+}
+
+function closeModal6() {
+  modal6.style.display = "none";
+}
 // function to close modal if outside click
 
 window.addEventListener("click", outsideClick);
@@ -154,12 +167,14 @@ function outsideClick(e) {
     e.target == simpleModal2 ||
     e.target == simpleModal3 ||
     e.target == simpleModal4 ||
-    e.target == simpleModal5
+    e.target == simpleModal5 ||
+    e.target == simpleModal6
   ) {
     closeModal1();
     closeModal2();
     closeModal3();
     closeModal4();
     closeModal5();
+    closeModal6();
   }
 }
